@@ -6,7 +6,10 @@ const app = express();
 const cors = require("cors");
 
 const corsOptions = {
-  origin: "https://platzi-store-express-webpack.netlify.app/",
+  origin: [
+    "https://platzi-store-express-webpack.netlify.app/",
+    "https://platzi-store-express-webpack.netlify.app/api/products",
+  ],
 };
 
 app.use(cors(corsOptions));
