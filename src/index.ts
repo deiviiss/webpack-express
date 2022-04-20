@@ -3,6 +3,13 @@ import * as express from "express";
 import { Request, Response } from "express";
 
 const app = express();
+const cors = require("cors");
+
+const corsOptions = {
+  origin: "https://platzi-store-express-webpack.herokuapp.com/api/v1/products",
+};
+
+app.use(cors(corsOptions));
 
 const port = process.env.PORT || 3005;
 
